@@ -11,4 +11,8 @@ test('generate design in photopea', async ({ page }) => {
 
   await editor.createCanvas();
 
+  await editor.addText("Hello");
+  await editor.addText("World");
+  
+
 });

@@ -18,4 +18,12 @@ export class PhotopeaPage {
     await this.page.locator("//select[@id='dd470']").selectOption('32 bit');
     await this.page.click("//button[normalize-space()='Create']");
   }
+  async addText(text: string) {
+
+  await this.page.keyboard.press("T");
+
+  await this.page.mouse.click(400, 200);
+
+  await this.page.keyboard.type(text);
+}
 }

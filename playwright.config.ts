@@ -22,7 +22,7 @@ export default defineConfig({
   use: {
     baseURL: 'https://www.photopea.com',
 
-    headless: false,
+    headless: process.env.CI ? true : false,
 
     viewport: { width: 1280, height: 960 },
 
