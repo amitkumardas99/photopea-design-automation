@@ -1,8 +1,14 @@
 import { test, expect } from '@playwright/test';
+import { PhotopeaPage } from '../pages/photopea_page';
 
-
-test('has title', async ({ page }) => {
-  await page.goto("/");
-
+test.beforeEach(async ({ page }) => {
+  await page.goto('/');
 });
 
+test('generate design in photopea', async ({ page }) => {
+
+  const editor = new PhotopeaPage(page);
+
+  await editor.createCanvas();
+
+});
